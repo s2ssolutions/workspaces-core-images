@@ -87,9 +87,9 @@ function pull_profile (){
 		log "Downloading and unpacking user profile from object storage."
 		set +e
 		if [[ $DEBUG == true ]]; then
-			OUTPUT=$(http_proxy="" https_proxy="" /usr/bin/kasm-profile-sync --download /home/kasm-user --insecure --remote ${KASM_API_HOST} --port ${KASM_API_PORT} -c ${KASM_PROFILE_CHUNK_SIZE} --token ${KASM_API_JWT} --verbose 2>&1 )
+			OUTPUT=$(http_proxy="" https_proxy="" /usr/bin/kasm-profile-sync --download /home/temp-user --insecure --remote ${KASM_API_HOST} --port ${KASM_API_PORT} -c ${KASM_PROFILE_CHUNK_SIZE} --token ${KASM_API_JWT} --verbose 2>&1 )
 		else
-			OUTPUT=$(http_proxy="" https_proxy="" /usr/bin/kasm-profile-sync --download /home/kasm-user --insecure --remote ${KASM_API_HOST} --port ${KASM_API_PORT} -c ${KASM_PROFILE_CHUNK_SIZE} --token ${KASM_API_JWT} 2>&1 )
+			OUTPUT=$(http_proxy="" https_proxy="" /usr/bin/kasm-profile-sync --download /home/temp-user --insecure --remote ${KASM_API_HOST} --port ${KASM_API_PORT} -c ${KASM_PROFILE_CHUNK_SIZE} --token ${KASM_API_JWT} 2>&1 )
 		fi
 
 		# log output of profile sync

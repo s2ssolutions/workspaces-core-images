@@ -22,7 +22,7 @@ fi
 
 # change the default path where pdfs are saved
 # to the one watched by the printer service
-sed -i -r -e "s:^(Out\s).*:\1/home/kasm-user/PDF:" /etc/cups/cups-pdf.conf
+sed -i -r -e "s:^(Out\s).*:\1/home/temp-user/PDF:" /etc/cups/cups-pdf.conf
 
 COMMIT_ID="7f560de30209f2fc9b59adb44430a80558c446ce"
 BRANCH="develop"

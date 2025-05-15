@@ -215,5 +215,5 @@ fi
 mkdir -p $KASM_VNC_PATH/www/Downloads
 chown -R 0:0 $KASM_VNC_PATH
 chmod -R og-w $KASM_VNC_PATH
-ln -sf /home/kasm-user/Downloads $KASM_VNC_PATH/www/Downloads/Downloads
+ln -sf /home/temp-user/Downloads $KASM_VNC_PATH/www/Downloads/Downloads
 chown -R 1000:0 $KASM_VNC_PATH/www/Downloads
